@@ -1,0 +1,26 @@
+
+h1{
+    color: green;
+    font-family: sans-serif;
+}
+
+#amr{
+   color: yellow;
+}
+p{
+   font-weight:600 ;
+   font-size: 48px;
+   color: palevioletred;
+}
+
+#red {
+ color: red;
+}
+#brown{
+ color: brown;
+}
+body{
+   background-color: orange;
+   font-size: 16px;
+}
+
