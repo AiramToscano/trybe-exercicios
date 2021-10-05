@@ -1,0 +1,63 @@
+ol.list1 {
+
+    background-color: yellow;
+    
+}
+
+ol.list1 li:nth-child(2n){
+ 
+    color: green;
+}
+
+.list1 li:nth-child(2n+1){
+
+  text-transform: uppercase;
+
+}
+.list2 {
+
+    color: red
+}
+
+ .list2 em{
+     font-size: 40px;
+    border: 1px solid black;
+}
+
+.list1 li{
+
+    font-size: 20px;
+}
+
+.list1 li em {
+    font-weight: bold;
+}
+
+
+
+
+ul.list1 li span{
+
+    background-color: pink;
+    
+}
+
+.list4 {
+    color: blue;
+}
+.list6:hover a{
+
+    color: orange;
+    font-weight: bold;
+}
+.list7:hover a {
+
+    color: green;
+    font-weight: bold;
+}
+
+.list8:hover a{
+
+    color:black;
+    font-weight: bold;
+}
