@@ -1,0 +1,59 @@
+h1 {
+    text-align: center;
+  }
+
+  .first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    display: inline-block;
+    margin-left: 35%;
+    
+    
+  }
+
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    
+   
+  }
+
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+   
+    }
+
+.teste1 li{
+
+    display: inline-block;
+    width: 300px;
+    
+}
+
+.teste1 {
+    margin-left: 135px;
+}
+
+h3 {
+
+text-align: center;
+}
+
+.section1 li {
+
+    text-align: center;
+    display: inline;
+    
+}
+
+.section1 {
+    margin-left: 120px;
+}
