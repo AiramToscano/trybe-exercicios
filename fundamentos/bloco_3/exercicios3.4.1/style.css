@@ -14,7 +14,7 @@ body{
     text-align: center;
     color: wheat;
     
-  
+
 }
 
 nav{
@@ -117,6 +117,9 @@ aside h3{
     font-size: 20px;
 }
 
+.image2{
+    height: 400px;
+}
 
 footer {
 
