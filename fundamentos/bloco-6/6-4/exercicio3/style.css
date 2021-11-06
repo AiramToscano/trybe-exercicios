@@ -1,0 +1,183 @@
+#container {
+  margin: 0 auto;
+  width: 100%;
+  background: #fff;
+}
+
+#header {
+  background: #ccc;
+  padding: 20px;
+}
+
+#header h1 {
+  margin: 0;
+}
+
+#navigation {
+  float: left;
+  width: 100%;
+  background: #333;
+}
+
+#navigation ul {
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+#navigation li a {
+  display: block;
+  float: left;
+  padding: 5px 10px;
+  color: #fff;
+  text-decoration: none;
+  border-right: 1px solid #fff;
+}
+
+#navigation li a:hover {
+  background: #383;
+}
+
+#content-container {
+  float: left;
+  width: 100%;
+  background: #FFF;
+}
+
+#content {
+  clear: left;
+  float: left;
+  width: 60%;
+  padding: 20px 0;
+  margin: 0 0 0 4%;
+  display: inline;
+}
+
+#content h2 {
+  margin: 0;
+}
+
+#aside {
+  float: right;
+  width: 33%;
+  padding: 20px 0;
+  margin: 0 3% 0 0;
+  display: inline;
+}
+
+#aside h3 {
+  margin: 0;
+}
+
+#footer {
+  clear: left;
+  background: #ccc;
+  text-align: right;
+  padding: 20px;
+  height: 1%;
+}
+
+#header p {
+  color: white;
+}
+
+@media screen and (min-width: 950px) {
+
+
+  #header {
+    background: #ccc;
+    padding: 0px;
+  }
+
+  #navigation {
+    display: none;
+  }
+
+  #header {
+    background: white;
+    padding: 0px;
+    display: flex;
+    justify-content:space-around;
+   
+
+  }
+
+  #header h1 {
+    display: flex;
+    font-size: medium;
+    margin-right: 50px;
+    
+
+  }
+
+  #header p {
+    color: black;
+    margin: 0 -200px;
+    
+  }
+
+  #footer {
+    clear: left;
+    background: white;
+    text-align: left;
+    padding: 0px;
+    height: 1%;
+  }
+
+  #content-container {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 100%;
+    background: #FFF;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #content p {
+    width: 150%;
+    text-align: justify;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  #content-container p {
+    display: none;
+  }
+
+  #aside {
+    display: none;
+  }
+ header{
+  background: #ccc;
+  padding: 20px;
+
+ }
+  
+  #footer {
+    display: none;
+  }
+
+  #header p{
+    display: none;
+  }
+  #navigation ul li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
+  #navigation  {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0; 
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function criarh1(){  // 1- Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
+let h1pai = document.body;
+let criartexth1 = document.createElement('h1');
+criartexth1.textContent ="Exercício 5.2 - JavaScript DOM"
+h1pai.appendChild(criartexth1);
+criartexth1.className="title";
+      } 
+
+      criarh1();
+
+  function criarmain(){
+let tagmain = document.body;
+let criarmain = document.createElement('main');
+tagmain.appendChild(criarmain);
+criarmain.className = "main-content";
+criarmain.style.background = "green"
+
+  }
+criarmain();
+ function criarsection (){
+let tagsection = document.querySelector('.main-content');
+let criarsection1 = document.createElement('section');
+tagsection.appendChild(criarsection1);
+criarsection1.className = "center-content";
+
+
+
+ }
+
+ criarsection();
+
+function criarpasso4(){
+
+let tagp = document.querySelector('.center-content');
+let criatagp = document.createElement('p');
+tagp.appendChild(criatagp);
+criatagp.textContent = " Fazendo exercicio 5.2 sobre DOM"
+
+
+
+}
+
+criarpasso4();
+
+function criarsection42(){
+let tagsection2 = document.querySelector('.main-content');
+let criarsection2 = document.createElement('section');
+tagsection2.appendChild(criarsection2);
+criarsection2.className = "left-content";
+}
+
+criarsection42();
+
+function criarsection43(){
+let tagsection3 = document.querySelector('.main-content');
+let criarsection3 = document.createElement('section');
+tagsection3.appendChild(criarsection3);
+criarsection3.className = "right-content";
+}
+
+criarsection43();
+function InserirImagem() {
+        let criarimg = document.querySelector('.left-content')
+        let img = document.createElement("img");
+        criarimg.appendChild(img);
+        img.className = 'small-image'
+        img.src= 'https://picsum.photos/200' ;
+       
+    }
+
+    InserirImagem();
+    
+ 
+function criarlista() {
+  let listanumeros1 = [
+      'um',
+      'dois',
+      'tres',
+      'quatro',
+      'cinco',
+      'seis',
+      'sete',
+      'oito',
+      'nove',
+      'dez'
+  ];
+      
+        let listanumeros = document.querySelector('.right-content')
+        for ( let i = 0; i < listanumeros1.length; i += 1) {
+          let listanumerosindex = listanumeros1[i];
+          let lista = document.createElement("ol");
+          lista.innerHTML = listanumerosindex;
+          listanumeros.appendChild(lista);
+          lista.className = "lista";
+          
+        }
+       
+             
+//         let removelista1 = document.querySelectorAll(".lista")
+//           for ( let i = 0 ; i < removelista1.length; i += 1) {
+//             let lerlista = removelista1[i];
+//             if ( lerlista.innerHTML.includes("nove")) {
+//               listanumeros.removeChild(lerlista);}
+//               else if ( lerlista.innerHTML.includes("dez")) {
+//               listanumeros.removeChild(lerlista);
+// }
+// }
+
+
+}
+       
+    
+
+    criarlista();
+
+    function criarh31() {
+        let criah31 = document.querySelector('.main-content')
+        let criarh311 = document.createElement("h3");
+        let criarh322 = document.createElement("h3")
+        criah31.appendChild(criarh311);
+        criah31.appendChild(criarh322);
+        let criarh333 = document.createElement("h3")
+        criah31.appendChild(criarh333);
+        criarh311.className ="description";
+        criarh322.className ="description";
+        criarh333.className ="description";
+        
+        
+        
+       
+    }
+
+    criarh31();
+ function removechild(){
+
+   let remove1 = document.querySelector('.left-content')
+   remove1.remove();
+
+ 
+ }
+ removechild();
+
+ function centralize(){
+
+let centralize = document.querySelector('.right-content')
+centralize.style.margin= 'auto';
+
+
+
+}
+centralize();
+
+function removelista (){
+
+let removelista1porra = document.querySelector('.right-content');
+
+removelista1porra.lastChild.remove();
+removelista1porra.lastChild.remove();
+
+
+
+
+}
+removelista();
+    </script>
+  </body>
+</html>

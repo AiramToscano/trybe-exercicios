@@ -1,0 +1,63 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  @media screen and (max-width: 550px) {
+    body {
+      background: rgba(0,255,0,.2);
+      margin: 25px 10%;
+      
+     
+    }
+   header{
+     display: flex;
+     flex-direction: column;
+   }
+   .home ul{
+     display: flex;
+     justify-content: space-around;
+     flex-wrap:wrap-reverse;
+   }
+   .header1 p {
+     text-align: center;
+   }
+   .aside-two h2{
+     font-size: large;
+     text-align: center;
+     
+   }
+   .main-content h1{
+        font-size: large;
+   }
+   .main-content{
+     justify-content: center;
+     text-align: center;
+   }
+  }
+
+  @media screen and (min-width: 550px) {
+    body {
+      background-color: lightblue;
+    }
+  
+    .container {
+      flex-wrap: wrap;
+    }
+  
+    /* TODO */
+  }
+  
+  @media screen and (min-width: 1000px) {
+    body {
+      background-color: lightgreen;
+    }
+  
+    .container {
+      flex-wrap: nowrap;
+    }
+  
+    /* TODO */
+  }
