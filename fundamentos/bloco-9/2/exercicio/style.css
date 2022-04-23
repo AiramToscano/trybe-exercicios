@@ -1,0 +1,13 @@
+
+body {
+    display: flexbox;
+    
+}
+
+ol {
+    margin-top: 30px;
+}
+
+.moedas { 
+    margin-top: 10px;
+}

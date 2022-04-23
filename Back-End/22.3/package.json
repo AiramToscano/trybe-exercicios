@@ -1,0 +1,17 @@
+{
+  "name": "22.3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node calculaSituacao.js",
+    "test": "mocha exercicio5.teste.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.2",
+    "sinon": "^13.0.2"
+  }
+}
