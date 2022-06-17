@@ -1,4 +1,4 @@
-const { searchMysqlCep, create } = require('../models/cepmodels')
+const { searchMysqlCep, create, getapi } = require('../models/cepmodels')
 const joi = require('joi');
 
 const searchCep = async (cep) => {
@@ -56,8 +56,25 @@ const createCep = async (cep, logradouro, bairro, localidade, uf) => {
  return createData
 }
 
+const formatApi = async( cepControler) => {
+ const api = await getapi(cepControler);
+ if(api.erro) return { "error": { "code": "notFound", "message": "CEP não encontrado" } }
+  const {cep, logradouro, bairro, localidade, uf} = api
+  const formatCepValid = cep.replace('-', '');
+  const obj = { 
+    cep,
+    logradouro,
+    bairro,
+    localidade,
+    uf
+  }
+ await createCep(formatCepValid, logradouro, bairro, localidade, uf)
+ return obj;
+}
+
 module.exports = {
     formatCep,
     createCep,
-    createValidCep
+    createValidCep,
+    formatApi
 }

@@ -1,4 +1,5 @@
 const connection = require('./connection')
+const axios = require('axios');
 
 const searchMysqlCep = async (cep) => {
     const query = "SELECT * FROM cep_lookup.ceps WHERE CEP = ?";
@@ -14,7 +15,13 @@ const create = async (cep, logradouro, bairro, localidade, uf) => {
     return createcep;
 }
 
+const getapi = async(cep) => {
+const api =  await axios.get(` https://viacep.com.br/ws/${cep}/json/`)
+    return api.data
+}
+
 module.exports = {
     searchMysqlCep,
-    create
+    create,
+    getapi
 }
