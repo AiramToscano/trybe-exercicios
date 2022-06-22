@@ -36,8 +36,4 @@ class Student extends Person {
     }
 }
 
-const person1 = new Student('Airam Toscano' , new Date(1992,2,10), [1,2,3], [4,5,6] );
-
-person1.sumGrades(person1.examsGrades, person1.worksGrades);
-person1.sumAverageGrade(person1.examsGrades, person1.worksGrades);
-person1.generateEnrollment();
+export default Student;
