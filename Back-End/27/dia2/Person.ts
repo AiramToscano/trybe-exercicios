@@ -29,10 +29,4 @@ class Person {
     }
     }
 
-
-const person1 = new Person('Airam Toscano' , new Date(1992,2,10));
-// person1.validDate(new Date(1992,2,10).toLocaleString().substr(0, 9));
-person1.validDate(1992);
-person1.getPerson();
-
 export default Person;
