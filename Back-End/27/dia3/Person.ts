@@ -6,7 +6,9 @@ export default abstract class Person {
         this._birthDate = birthDate;
     }
     get getname(): string { return this._name; }
-    set getname(value: string) { this._name = value; }
+    set getname(value: string) {
+        this._name = value; 
+    }
     get getbirthdate(): Date {return this._birthDate}
     set getbirthdate(value: Date) { this._birthDate = value}
 }
