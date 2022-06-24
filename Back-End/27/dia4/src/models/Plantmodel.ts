@@ -1,6 +1,13 @@
 /* eslint-disable import/no-unresolved */
 import { Pool } from 'mysql2/promise';
-import Plants from '../interfaces/Plants';
+
+interface Plants {
+  id?: number;
+  breed: string;
+  size: number;
+  needsSun: boolean;
+  origin: string;
+}
 
 export default class Plantmodel {
   public connection: Pool;
