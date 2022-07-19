@@ -1,1 +1,0 @@
-const trato =0;
