@@ -1,0 +1,25 @@
+use('class');
+db.getCollection('heros').find();
+
+use('class');
+db.getCollection('heros').findOne();
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.height": {$lt: 180}});
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.height": {$lt: 180}}).count();
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.hairColor": {$in: ['Black',"No Hair"]}});
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.height": {$not:  {$gt: 180}}});
+
+use('class');
+db.getCollection('heros').deleteMany(
+    { publisher : "George Lucas" });
