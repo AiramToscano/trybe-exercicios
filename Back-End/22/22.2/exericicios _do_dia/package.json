@@ -1,0 +1,21 @@
+{
+  "name": "exericicios-_do_dia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercicio1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node exercicio1.js",
+    "exec2": "node exercicio2.js",
+    "simpsons": "node exercicio4.js",
+    "exec5": "node exercicio5.js",
+    "exec6": "node exercicio6.js",
+    "exec7": "node exercicio7.js",
+    "exec8": "node exercicio8.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}
