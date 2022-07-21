@@ -1,0 +1,109 @@
+
+
+// Insert a few documents into the sales collection.
+db.books.insertMany([
+{
+  "title": "Batman",
+  "category": [ "action", "adventure" ],
+  "imdbRating": 7.6,
+  "budget": 35
+},
+{
+  "title": "Godzilla",
+  "category": [ "action", "adventure", "sci-fi" ],
+  "imdbRating": 6.6
+},
+{
+  "title": "Home Alone",
+  "category": [ "family", "comedy" ],
+  "imdbRating": 7.4
+}
+]);
+
+
+db.getCollection('books').find();
+
+db.getCollection('books').updateOne(
+  { title: "Batman" },
+  { $set: { imdbRating: 7.7 } }
+);
+
+db.getCollection('books').updateOne(
+  { title: "Godzilla" },
+  { $set: { budget: 1 } }
+);
+
+db.getCollection('books').updateOne(
+  { title: "Home Alone" },
+  { $set: { budget: 15, imdbRating: 5.5 } }
+);
+
+db.getCollection('books').find();
+
+db.getCollection('books').updateOne(
+  { title: "Batman" },
+  { $inc: { imdbRating: 2 } }
+);
+
+db.getCollection('books').updateOne(
+  { title: "Home Alone" },
+  { $inc: { budget: 5 } }
+);
+
+db.getCollection('books').updateOne(
+  { title: "Batman" },
+  { $mul: { imdbRating : 4 } }
+);
+
+db.getCollection('books').find();
+
+db.getCollection('books').updateOne(
+  { title: "Batman" },
+  { $rename: { budget : "estimatedBudget" } }
+);
+
+db.getCollection('books').updateOne(
+  { title: "Home Alone" },
+  { $min: { budget: 5 } }
+);
+
+db.getCollection('books').updateOne(
+  { title: "Godzilla" },
+  { $max: { imdbRating: 8.6 },
+    $set: { "category.1": "thriller" }
+   }
+);
+
+db.getCollection('books').updateOne(
+  { title: "Home Alone" },
+  { $currentDate: {
+      lastModified: true,
+      "lastUpdated": { $type: "timestamp" }
+   }}
+);
+
+db.getCollection('books').find();
+
+db.getCollection('books').updateMany(
+    {},
+  { $set: { sequels: 0 } }
+);
+
+db.getCollection('books').updateMany(
+    {},
+   { $unset: { budget: "", estimatedBudget: "" } }
+);
+
+db.getCollection('books').updateMany(
+  {
+    $or: [
+      { title: "Batman" },
+      { title: "Home Alone" },
+    ],
+  },
+  {
+    $max: {
+      imdbRating: 17
+    },
+  },
+);
