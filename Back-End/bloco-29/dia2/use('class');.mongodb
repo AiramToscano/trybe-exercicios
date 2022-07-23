@@ -1,0 +1,101 @@
+use('class');
+db.getCollection('heros').find();
+
+use('class');
+db.getCollection('heros').findOne();
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.height": {$lt: 180}});
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.height": {$lt: 180}}).count();
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.hairColor": {$in: ['Black',"No Hair"]}});
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.height": {$not:  {$gt: 180}}});
+
+use('class');
+db.getCollection('heros').deleteMany(
+    { publisher : "George Lucas" });
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.height": {$lte: 180}}).count();
+
+use('class');
+db.getCollection('heros').findOne(
+    {"aspects.height": {$gte: 200}});
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.height": {$gte: 200}}).count();
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.eyeColor": "green"});
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.eyeColor": "blue"}).count();
+
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.hairColor":
+     { $not:{$in: ['Black',"No Hair"]}}}).count();
+
+use('class');
+db.getCollection('heros').find(
+    {"aspects.hairColor":
+     { $not:{$in: ['Black',"No Hair"]}}});
+
+use('class');
+db.getCollection('heros').find({
+    $nor: [
+        { race:"Human" },
+        {"aspects.height": {$gt: 180}}
+    ]
+});
+//questão 14
+use('class');
+db.getCollection('heros').find({
+    $and: [
+        { publisher: "Marvel Comics" },
+        {
+        $or: [
+                { "aspects.height" : {$eq: 180 }},
+                { "aspects.height" : {$eq: 200 }},
+            ]
+        }
+    ]
+});
+
+use('class');
+db.getCollection('heros').find();
+
+use('class');
+db.getCollection('heros').find({
+    $and: [
+        { publisher: {$ne: "DC Comics"} },
+                { "aspects.weight" : {$gte: 80 }},
+                { "aspects.weight" : {$lte: 100 }},
+            {
+                $or: [{ race: "Human" }, { race: "Mutant" }]
+            },
+    ]
+});
+
+use('class');
+db.getCollection('heros').find({ race: { $exists: false } }).count();
+
+use('class');
+db.getCollection('heros').find({ "aspects.hairColor": { $exists: true } }).count();
+
+use('class');
+db.getCollection('heros').deleteOne({ publisher: "Sony Pictures" })
