@@ -107,3 +107,5 @@ db.getCollection('books').updateMany(
     },
   },
 );
+
+db.getCollection('books').find();

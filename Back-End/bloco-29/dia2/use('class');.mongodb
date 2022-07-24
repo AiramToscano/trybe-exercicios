@@ -75,3 +75,27 @@ db.getCollection('heros').find({
         }
     ]
 });
+
+use('class');
+db.getCollection('heros').find();
+
+use('class');
+db.getCollection('heros').find({
+    $and: [
+        { publisher: {$ne: "DC Comics"} },
+                { "aspects.weight" : {$gte: 80 }},
+                { "aspects.weight" : {$lte: 100 }},
+            {
+                $or: [{ race: "Human" }, { race: "Mutant" }]
+            },
+    ]
+});
+
+use('class');
+db.getCollection('heros').find({ race: { $exists: false } }).count();
+
+use('class');
+db.getCollection('heros').find({ "aspects.hairColor": { $exists: true } }).count();
+
+use('class');
+db.getCollection('heros').deleteOne({ publisher: "Sony Pictures" })

@@ -108,3 +108,52 @@ db.movies.find(
     { description: { $regex: /^The/i } },
      { title: true , description:true}
     );
+
+db.movies.find();
+
+db.movies.find({
+    ratings: { $elemMatch: { $gt: 103}}},
+    {title: true,
+    ratings: true}
+);
+
+db.movies.find({
+    category: {$all: ["adventure"]},
+    ratings: { $elemMatch: { $gt: 103}}},
+    {title: true,
+    ratings: true,
+    category: true}
+);
+
+db.movies.find({
+    category: {$size: 2}},
+    {title: true,
+    category: true,
+    budget: true}
+);
+
+db.movies.find({
+    category: {$size: 2},
+    budget: {$mod: [5,0]}
+    },
+    {title: true,
+    category: true,
+    budget: true}
+);
+
+db.movies.find();
+
+db.movies.find({
+    ratings: {$size: 4},
+    category: { $in: ["adventure", "family"] },
+    imdbRating: {$gt: 7}
+    },
+    {title: true,
+    category: true,
+    imdbRating: true}
+);
+
+db.movies.find(
+    { description: { $regex: /humanity.$/ } },
+     { title: true , description:true}
+    );
