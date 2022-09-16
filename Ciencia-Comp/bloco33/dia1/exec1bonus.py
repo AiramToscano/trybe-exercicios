@@ -5,3 +5,4 @@ for i in lista:
         menor = i
 
 print(menor)
+
